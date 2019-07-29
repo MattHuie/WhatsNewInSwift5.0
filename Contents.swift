@@ -11,6 +11,7 @@ import UIKit
 // Raw Strings
 //=======================================
 // Extended String Delimiters - https://docs.swift.org/swift-book/LanguageGuide/StringsAndCharacters.html
+
 // "hello"
 print("\"hello\"")
 
@@ -21,3 +22,25 @@ let pursuitMessage = #""Welcome to Pursuit's \#(programmingLanguage) 6.0 cohort"
     // We dont have to put backslashes for the ' as well as the front and back
     // Handling string interpolation by adding an extra # delimeter embedding in \#()
 print(pursuitMessage)
+
+
+//======================================
+// Character Properties
+//======================================
+// Inspecting a Character - https://developer.apple.com/documentation/swift/character
+
+let sentence = "1$🧨&4?ap*"
+for char in sentence {
+    if char.isLetter {
+        print("letter: \(char)")
+    }
+    if char.isCurrencySymbol {
+        print("currency symbol: \(char)")
+    }
+    if char.isSymbol {
+        print("symbol: \(char)")
+    }
+    if char.isPunctuation {
+        print("puncuation: \(char)")
+    }
+}
